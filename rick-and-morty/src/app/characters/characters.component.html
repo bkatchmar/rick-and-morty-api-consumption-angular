@@ -1,1 +1,22 @@
-<p>characters works!</p>
+<div class="container characters">
+    <div class="table-responsive">
+        <table class="table table-striped table-hover" *ngIf="characterCall">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Species</th>
+                    <th>Status</th>
+                    <th>Gender</th>
+                </tr>
+            </thead>
+            <tbody *ngIf="characterCall.results">
+                <tr *ngFor="let c of characterCall.results">
+                    <td>{{c.name}}</td>
+                    <td>{{c.species}}</td>
+                    <td>{{c.status}}</td>
+                    <td>{{c.gender}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

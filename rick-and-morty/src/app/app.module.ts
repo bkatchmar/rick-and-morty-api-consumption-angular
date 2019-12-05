@@ -1,10 +1,11 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { HttpClientModule }    from "@angular/common/http";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { CharactersComponent } from './characters/characters.component';
-import { EpisodesComponent } from './episodes/episodes.component';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { CharactersComponent } from "./characters/characters.component";
+import { EpisodesComponent } from "./episodes/episodes.component";
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { EpisodesComponent } from './episodes/episodes.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
