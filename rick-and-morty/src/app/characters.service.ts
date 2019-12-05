@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { CharacterApiResponse } from "./api_responses/characterapiresponse";
 import { Observable } from "rxjs";
