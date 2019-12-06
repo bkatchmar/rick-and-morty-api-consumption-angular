@@ -13,6 +13,7 @@ ng build --prod --base-href /rick-and-morty-api-consumption-angular/
 ng generate component characters
 ng generate component episodes
 ng generate service characters
+ng generate component individual
 ```
 
 ```

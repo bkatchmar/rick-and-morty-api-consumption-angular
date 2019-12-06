@@ -16,7 +16,7 @@
                 </tr>
             </thead>
             <tbody *ngIf="characterCall.results">
-                <tr *ngFor="let c of characterCall.results" routerLink="/episodes">
+                <tr *ngFor="let c of characterCall.results" [routerLink]="['/character', c.id]">
                     <td>{{c.name}}</td>
                     <td>{{c.species}}</td>
                     <td>{{c.status}}</td>
