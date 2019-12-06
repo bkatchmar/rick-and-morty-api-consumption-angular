@@ -9,7 +9,7 @@ import { Observable } from "rxjs";
 export class CharactersService {
   private charactersUrl = "https://rickandmortyapi.com/api/character";  // URL to web api
   constructor(private http: HttpClient) { }
-  getCharacters(): Observable<CharacterApiResponse> {
-    return this.http.get<CharacterApiResponse>(this.charactersUrl);
+  getCharacters(page = 1, term = ""): Observable<CharacterApiResponse> {
+    return this.http.get<CharacterApiResponse>(`${this.charactersUrl}/?page=${page}${(term === "") ? "" : "&name=" + term}`);
   }
 }
