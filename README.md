@@ -14,6 +14,7 @@ ng generate component characters
 ng generate component episodes
 ng generate service characters
 ng generate component individual
+ng generate service episodes
 ```
 
 ```
