@@ -16,7 +16,7 @@
                 </tr>
             </thead>
             <tbody *ngIf="characterCall.results">
-                <tr *ngFor="let c of characterCall.results" [routerLink]="['/character', c.id]">
+                <tr *ngFor="let c of characterCall.results" [routerLink]="['/character', c.id]" [queryParams]="{ fromPage : currentPage, nameSearch : searchTerm }">
                     <td>{{c.name}}</td>
                     <td>{{c.species}}</td>
                     <td>{{c.status}}</td>
