@@ -25,7 +25,7 @@
             </tbody>
         </table>
     </div>
-    <nav class="" aria-label="pagination">
+    <nav aria-label="pagination">
         <ul class="pagination" *ngIf="pages">
             <li class="page-item" *ngFor="let p of pages" [ngClass]="{'active': (p===currentPage)}">
                 <button class="page-link" (click)="getCharacters(p)">{{p}}</button>

@@ -7,6 +7,19 @@
                     <th>Episode</th>
                 </tr>
             </thead>
+            <tbody *ngIf="episodesCall.results">
+                <tr *ngFor="let e of episodesCall.results">
+                    <td>{{e.name}}</td>
+                    <td>{{e.episode}}</td>
+                </tr>
+            </tbody>
         </table>
     </div>
+    <nav aria-label="pagination">
+        <ul class="pagination" *ngIf="pages">
+            <li class="page-item" *ngFor="let p of pages" [ngClass]="{'active': (p===currentPage)}">
+                <button class="page-link" (click)="getEpisodes(p)">{{p}}</button>
+            </li>
+        </ul>
+    </nav>
 </div>
